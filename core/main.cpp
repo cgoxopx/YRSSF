@@ -844,7 +844,20 @@ class API{
 static void luaopen_yrssf_std(lua_State * L){
   char sbuffer[PATH_MAX];
   getcwd(sbuffer,PATH_MAX);
-    luaL_openlibs      (L);
+    #ifdef ysStatic
+      luaopen_base	(L);
+      luaopen_coroutine	(L);
+      luaopen_table	(L);
+      luaopen_io	(L);
+      luaopen_os	(L);
+      luaopen_string	(L);
+      luaopen_utf8	(L);
+      luaopen_bit32	(L);
+      luaopen_math	(L);
+      luaopen_debug	(L);
+    #else
+      luaL_openlibs(L);
+    #endif
     lua_pushptr        (L,&server);
     lua_setglobal      (L,"SERVER");
     lua_pushptr        (L,&client);

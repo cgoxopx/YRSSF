@@ -1,5 +1,5 @@
 # [YRSSF](https://github.com/cgoxopx/YRSSF)  #
-YRSSF（Yun'er Study System Framework 或者 Shuang Si Ruiyi Famework），这是一个p2p架构的 云教学系统/直播平台框架（CMS），目的是开发一个[睿易云](http://www.ruiyiyun.com)的免费替代品。  
+YRSSF（Yun'er Study System Framework 或者 Shuang Si Ruiyi Framework），这是一个p2p架构的 云教学系统/直播平台框架（CMS），目的是开发一个[睿易云](http://www.ruiyiyun.com)的免费替代品。  
 本项目遵守GPL-3.0协议  
 如需用于商业用途等需要改协议，请联系qq  
 *  2577199574  

@@ -58,7 +58,7 @@ all:../build/YRSSF
 	 -lssl                             \
 	 -lcrypto                          \
 	 -o ../build/YRSSF
-android : .dep
+static : .dep
 	g++ main.cpp -static               \
 	 -pthread                          \
 	 ./leveldb/out-static/libleveldb.a \
@@ -70,8 +70,7 @@ android : .dep
 	 ./lua-cjson/strbuf.o              \
 	 ./lua-cjson/fpconv.o              \
 	 ./sqlite/sqlite3.o                \
-	 -Wl,-Bdynamic,-ldl                \
-	 -DWEB1                            \
+	 -DysStatic                        \
 	 -I ./lua/src                      \
 	 -I ./leveldb/include              \
 	 -I ./zlib                         \
@@ -82,6 +81,8 @@ android : .dep
 	 -lssl                             \
 	 -lcrypto                          \
 	 -o ../build/YRSSF
+android : static
+	
 ./zlib/libz.a :
 	cd zlib       && make
 ./leveldb/out-static/libleveldb.a :
